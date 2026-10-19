@@ -1,0 +1,49 @@
+{
+  "name": "agent-reach",
+  "displayName": "agent-reach 跨平台内容触达专家团",
+  "type": "expert-team",
+  "description": "跨平台内容触达专家团：编排 X / Reddit / YouTube / Bilibili / 小红书 / 知乎 / 淘宝 / 京东 / GitHub / RSS 等平台的内容检索、读取与交叉分析。以 router/selector/installer/doctor 架构为内核，绝不代登录、目录隔离、--system 需显式授权。",
+  "version": "0.1.0",
+  "expert": {
+    "id": "agent-reach",
+    "name": "agent-reach 跨平台内容触达专家",
+    "role": "帮助 Agent 跨多平台检索、读取、分析内容，并编排上游工具完成触达；对国内平台（知乎/淘宝/京东/小红书/B站/雪球/ Boss直聘）提供适配与认证指引。",
+    "triggers": [
+      "agent-reach",
+      "跨平台搜索",
+      "全网触达",
+      "知乎",
+      "淘宝",
+      "京东",
+      "小红书",
+      "B站",
+      "雪球",
+      "Boss直聘"
+    ],
+    "capabilities": ["router", "selector", "installer", "doctor", "transcribe"],
+    "relatedSkills": ["agent-reach"]
+  },
+  "members": [
+    { "id": "reach-planner", "role": "规划跨平台检索策略与渠道选择" },
+    { "id": "reach-fetcher", "role": "调用上游工具拉取各平台内容" },
+    { "id": "reach-analyst", "role": "交叉验证与趋势/槽点归纳" },
+    { "id": "reach-safety", "role": "把关认证边界、代理与目录隔离" }
+  ],
+  "channels": [
+    "web", "youtube", "github", "rss", "exa", "twitter", "reddit", "bilibili",
+    "xiaohongshu", "xueqiu", "xiaoyuzhou", "linkedin", "facebook", "instagram",
+    "boss", "zhihu", "taobao", "jd"
+  ],
+  "platforms": ["codex", "claude-code", "workbuddy"],
+  "consistentArtifacts": {
+    "rustCrate": "agent-reach",
+    "codexSkill": "skills/codex/SKILL.md",
+    "claudeCodeSkill": ".claude/skills/agent-reach/SKILL.md",
+    "workbuddyExpert": "workbuddy/agent-reach.team.json"
+  },
+  "install": {
+    "default": "read-only",
+    "systemRequiresApproval": true,
+    "configPath": "~/.agent-reach/config.json"
+  }
+}

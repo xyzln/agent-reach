@@ -1,0 +1,13 @@
+agent-reach
+==========
+
+This project is a Rust implementation derived from the Agent Reach design
+(original project by Panniantong, licensed under the MIT License).
+
+It is distributed under the MIT License. The original copyright notice and
+permission notice are preserved in the LICENSE file and must be retained in
+all copies or substantial portions of the Software.
+
+Added in this implementation: a Rust rewrite of the router / selector /
+installer / doctor architecture and integration of additional platforms
+(Zhihu / Taobao / JD).
